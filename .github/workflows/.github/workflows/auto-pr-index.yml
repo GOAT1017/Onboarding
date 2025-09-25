@@ -1,0 +1,28 @@
+name: Auto PR for index.html Updates
+
+on:
+  push:
+    branches:
+      - auto-update-index  # You can change this branch name as needed
+
+jobs:
+  create-pull-request:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+      cancel-in-progress: false   # Prevents cancellation by any bot
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: auto-update-index
+          base: main
+          title: "Automated update for index.html"
+          body: "This PR was automatically created for changes in index.html."
+          commit-message: "Auto-update index.html"
+          draft: false
