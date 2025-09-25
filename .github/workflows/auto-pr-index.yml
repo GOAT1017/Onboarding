@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - GOAT1017-patch-1
+      - 'copilot/fix-*'  # Also trigger for copilot branches for testing
     paths:
       - 'index.html'
 
