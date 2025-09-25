@@ -1,0 +1,61 @@
+name: Auto PR for Index.html Updates
+
+on:
+  push:
+    branches:
+      - GOAT1017-patch-1
+    paths:
+      - 'index.html'
+
+jobs:
+  create-pr:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+      cancel-in-progress: false   # Prevents cancellation by any bot, including @copilot-swe-agent[bot]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: GOAT1017-patch-1
+          base: main
+          title: "Education Tab Update - Automated PR"
+          body: |
+            ## Education Tab Updates
+            
+            This PR contains updates to the Education tab in index.html.
+            
+            ### Changes Made:
+            - ✅ Added new Education tab to navigation
+            - ✅ Added Education content section with comprehensive learning materials
+            - ✅ Updated JavaScript arrays and event handlers
+            - ✅ Added keyboard navigation support (Alt+6 for Education tab)
+            
+            ### Features:
+            - 📚 Trading Fundamentals section
+            - 📈 Technical Analysis resources
+            - 🧠 Trading Psychology materials
+            - 📖 Recommended books and video courses
+            - 📊 Learning progress tracker
+            
+            This PR was created automatically via the auto-pr-index.yml workflow.
+            The workflow prevents cancellation by bots using concurrency settings.
+          draft: false
+          delete-branch: false
+
+      - name: Add labels to PR
+        if: steps.create-pull-request.outputs.pull-request-number
+        run: |
+          gh pr edit ${{ steps.create-pull-request.outputs.pull-request-number }} \
+            --add-label "education" \
+            --add-label "enhancement" \
+            --add-label "automated-pr"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

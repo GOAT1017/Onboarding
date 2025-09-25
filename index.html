@@ -654,6 +654,9 @@
           <button id="dashboardTab" class="tab-btn" aria-controls="dashboardContent">
             🏠 Dashboard
           </button>
+          <button id="educationTab" class="tab-btn" aria-controls="educationContent">
+            🎓 Education
+          </button>
           <button id="quizBtn" class="tab-btn bg-purple-600 hover:bg-purple-700">
             🧠 Quiz
           </button>
@@ -1572,6 +1575,149 @@
       </div>
     </section>
 
+    <!-- === EDUCATION SECTION === -->
+    <section id="educationContent" class="hidden fade-in" role="main" aria-labelledby="educationHeading">
+      <div class="card mb-8">
+        <div class="flex items-center gap-4 mb-6">
+          <div class="text-4xl">🎓</div>
+          <div>
+            <h2 id="educationHeading" class="text-3xl font-bold text-white">Education Center</h2>
+            <p class="text-lg text-blue-400">Comprehensive trading education resources and learning materials</p>
+          </div>
+        </div>
+
+        <!-- Education Categories -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-slate-700 rounded-lg p-6">
+            <h3 class="text-xl font-semibold text-green-400 mb-4">📚 Trading Fundamentals</h3>
+            <div class="space-y-3">
+              <div class="space-y-2">
+                <h4 class="font-semibold text-white">Market Basics</h4>
+                <ul class="space-y-1 text-sm text-slate-300">
+                  <li>• Understanding market structure</li>
+                  <li>• Price action principles</li>
+                  <li>• Volume analysis</li>
+                  <li>• Market psychology</li>
+                </ul>
+              </div>
+              <div class="space-y-2">
+                <h4 class="font-semibold text-white">Risk Management</h4>
+                <ul class="space-y-1 text-sm text-slate-300">
+                  <li>• Position sizing strategies</li>
+                  <li>• Stop loss placement</li>
+                  <li>• Risk-reward ratios</li>
+                  <li>• Portfolio management</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-slate-700 rounded-lg p-6">
+            <h3 class="text-xl font-semibold text-blue-400 mb-4">📈 Technical Analysis</h3>
+            <div class="space-y-3">
+              <div class="space-y-2">
+                <h4 class="font-semibold text-white">Chart Patterns</h4>
+                <ul class="space-y-1 text-sm text-slate-300">
+                  <li>• Support and resistance</li>
+                  <li>• Trend lines and channels</li>
+                  <li>• Reversal patterns</li>
+                  <li>• Continuation patterns</li>
+                </ul>
+              </div>
+              <div class="space-y-2">
+                <h4 class="font-semibold text-white">Indicators</h4>
+                <ul class="space-y-1 text-sm text-slate-300">
+                  <li>• Moving averages</li>
+                  <li>• RSI and oscillators</li>
+                  <li>• MACD signals</li>
+                  <li>• Volume indicators</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-slate-700 rounded-lg p-6">
+            <h3 class="text-xl font-semibold text-purple-400 mb-4">🧠 Trading Psychology</h3>
+            <div class="space-y-3">
+              <div class="space-y-2">
+                <h4 class="font-semibold text-white">Mental Game</h4>
+                <ul class="space-y-1 text-sm text-slate-300">
+                  <li>• Emotional control</li>
+                  <li>• Discipline development</li>
+                  <li>• Dealing with losses</li>
+                  <li>• Building confidence</li>
+                </ul>
+              </div>
+              <div class="space-y-2">
+                <h4 class="font-semibold text-white">Trading Habits</h4>
+                <ul class="space-y-1 text-sm text-slate-300">
+                  <li>• Daily routines</li>
+                  <li>• Journal keeping</li>
+                  <li>• Performance review</li>
+                  <li>• Continuous learning</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Learning Resources -->
+        <div class="mt-8">
+          <h3 class="text-2xl font-bold text-white mb-6">📖 Learning Resources</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-slate-700 rounded-lg p-6">
+              <h4 class="text-lg font-semibold text-yellow-400 mb-4">📚 Recommended Books</h4>
+              <ul class="space-y-2 text-sm text-slate-300">
+                <li>• "Market Wizards" by Jack Schwager</li>
+                <li>• "Trading in the Zone" by Mark Douglas</li>
+                <li>• "Technical Analysis of Financial Markets" by John Murphy</li>
+                <li>• "The New Trading for a Living" by Alexander Elder</li>
+                <li>• "Reminiscences of a Stock Operator" by Edwin Lefèvre</li>
+              </ul>
+            </div>
+            <div class="bg-slate-700 rounded-lg p-6">
+              <h4 class="text-lg font-semibold text-cyan-400 mb-4">🎥 Video Courses</h4>
+              <ul class="space-y-2 text-sm text-slate-300">
+                <li>• Beginner's Guide to Technical Analysis</li>
+                <li>• Advanced Options Trading Strategies</li>
+                <li>• Risk Management Masterclass</li>
+                <li>• Psychology of Trading</li>
+                <li>• Market Structure and Price Action</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Progress Tracker -->
+        <div class="mt-8 bg-slate-800 rounded-lg p-6">
+          <h3 class="text-xl font-bold text-white mb-4">📊 Learning Progress</h3>
+          <div class="space-y-4">
+            <div class="flex justify-between items-center">
+              <span class="text-slate-300">Fundamentals Completed</span>
+              <span class="text-green-400 font-semibold">0%</span>
+            </div>
+            <div class="w-full bg-slate-600 rounded-full h-2">
+              <div class="bg-green-500 h-2 rounded-full" style="width: 0%"></div>
+            </div>
+            <div class="flex justify-between items-center">
+              <span class="text-slate-300">Technical Analysis Progress</span>
+              <span class="text-blue-400 font-semibold">0%</span>
+            </div>
+            <div class="w-full bg-slate-600 rounded-full h-2">
+              <div class="bg-blue-500 h-2 rounded-full" style="width: 0%"></div>
+            </div>
+            <div class="flex justify-between items-center">
+              <span class="text-slate-300">Psychology Mastery</span>
+              <span class="text-purple-400 font-semibold">0%</span>
+            </div>
+            <div class="w-full bg-slate-600 rounded-full h-2">
+              <div class="bg-purple-500 h-2 rounded-full" style="width: 0%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- === ONBOARDING SECTION === -->
     <section id="onboardingContent" class="hidden fade-in" role="main" aria-labelledby="onboardingHeading">
       <div class="card mb-8">
@@ -1977,14 +2123,14 @@
 
     function showTab(tabName) {
       // Hide all sections
-      const sections = ['onboardingContent', 'syllabusContent', 'trainingContent', 'journalContent', 'dashboardContent'];
+      const sections = ['onboardingContent', 'syllabusContent', 'trainingContent', 'journalContent', 'dashboardContent', 'educationContent'];
       sections.forEach(id => {
         const element = document.getElementById(id);
         if (element) element.classList.add('hidden');
       });
 
       // Remove active class from all tabs
-      const tabs = ['onboardingTab', 'syllabusTab', 'trainingTab', 'journalTab', 'dashboardTab'];
+      const tabs = ['onboardingTab', 'syllabusTab', 'trainingTab', 'journalTab', 'dashboardTab', 'educationTab'];
       tabs.forEach(id => {
         const element = document.getElementById(id);
         if (element) element.classList.remove('active');
@@ -3022,6 +3168,7 @@
       document.getElementById('journalTab').addEventListener('click', () => showTab('journal'));
       document.getElementById('trainingTab').addEventListener('click', () => showTab('training'));
       document.getElementById('dashboardTab').addEventListener('click', () => showTab('dashboard'));
+      document.getElementById('educationTab').addEventListener('click', () => showTab('education'));
       
       // Set up logout functionality
       document.getElementById('logoutBtn').addEventListener('click', () => {
@@ -3098,7 +3245,8 @@
           case '3': showTab('training'); break;
           case '4': showTab('journal'); break;
           case '5': showTab('dashboard'); break;
-          case '6': openQuiz(); break;
+          case '6': showTab('education'); break;
+          case '7': openQuiz(); break;
         }
       }
     }
