@@ -1,0 +1,17 @@
+name: Prevent Bot PR Cancellation
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  safe-pr-run:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+      cancel-in-progress: false   # This is the KEY line—prevents cancellation by any bot
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      # You can add more steps if needed, or leave as is
